@@ -1,8 +1,14 @@
-.Wrapper {
+.wrapper {
   max-width: 1280px;
   overflow-x: scroll;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 table {
@@ -26,4 +32,97 @@ th {
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-action {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #282c34;
+  cursor: pointer;
+}
+
+.input-with-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.inputs-container {
+  display: flex;
+  flex-flow: column;
+  gap: 0.25rem;
+}
+
+input,
+select {
+  padding: 0.25rem;
+  border: 1px solid #282c34;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #282c34;
+  color: white;
+}
+
+button:hover,
+button:focus {
+  background-color: #505868;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #282c34;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  background-color: #eaeaea;
 }

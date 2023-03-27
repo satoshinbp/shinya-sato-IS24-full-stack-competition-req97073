@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import fetchProducts from './api/fetchProducts'
 import './App.css'
+import ProductForm from './components/ProductForm'
 
 function App() {
   const [products, setProducts] = useState([])
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const fetchAndSetProducts = async () => {
@@ -15,8 +17,13 @@ function App() {
 
   return (
     <div>
-      <div className="Wrapper">
-        <h1>IMB Products ({products.length})</h1>
+      {open && <ProductForm setOpen={setOpen} setProducts={setProducts} />}
+
+      <div className="wrapper">
+        <header>
+          <h1>IMB Products ({products.length})</h1>
+          <button onClick={() => setOpen(true)}>Create Product</button>
+        </header>
         <table>
           <thead>
             <tr>
@@ -37,8 +44,8 @@ function App() {
                 <td>{product.scrumMasterName}</td>
                 <td>{product.productOwnerName}</td>
                 <td>
-                  {product.developerNames.map((n) => (
-                    <div>{n}</div>
+                  {product.developers.map((developer, i) => (
+                    <div key={i}>{developer}</div>
                   ))}
                 </td>
                 <td>{product.startDate}</td>
