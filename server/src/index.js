@@ -13,15 +13,13 @@ app.use((_, res, next) => {
   next()
 })
 
-app.get('/health', (_, res) => {
+app.get('/api/health', (_, res) => {
   res.status(200).send('OK')
 })
 
-app.get('/products', readProducts)
-
-app.post('/product', createProduct)
-
-app.put('/product/:id', updateProduct)
+app.get('/api/products', readProducts)
+app.post('/api/product', createProduct)
+app.put('/api/product/:id', updateProduct)
 
 const port = 3000
 app.listen(port, () => {
