@@ -4,8 +4,9 @@ import './App.css'
 import ProductForm from './components/ProductForm'
 
 function App() {
-  const [products, setProducts] = useState([])
   const [open, setOpen] = useState(false)
+  const [product, setProduct] = useState(null)
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
     const fetchAndSetProducts = async () => {
@@ -17,12 +18,19 @@ function App() {
 
   return (
     <div>
-      {open && <ProductForm setOpen={setOpen} setProducts={setProducts} />}
+      {open && <ProductForm setOpen={setOpen} product={product} setProducts={setProducts} />}
 
       <div className="wrapper">
         <header>
           <h1>IMB Products ({products.length})</h1>
-          <button onClick={() => setOpen(true)}>Create Product</button>
+          <button
+            onClick={() => {
+              setProduct(null)
+              setOpen(true)
+            }}
+          >
+            Create Product
+          </button>
         </header>
         <table>
           <thead>
@@ -38,7 +46,13 @@ function App() {
           </thead>
           <tbody>
             {products.map((product, i) => (
-              <tr key={i}>
+              <tr
+                key={i}
+                onClick={() => {
+                  setProduct(product)
+                  setOpen(true)
+                }}
+              >
                 <td>{product.productId}</td>
                 <td>{product.productName}</td>
                 <td>{product.scrumMasterName}</td>

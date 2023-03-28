@@ -1,26 +1,42 @@
 import React, { useState } from 'react'
 import createProduct from '../api/createProduct'
+import updateProduct from '../api/updateProduct'
 import '../App.css'
 
-function ProductForm({ setOpen, setProducts }) {
-  const [productName, setProductName] = useState('')
-  const [scrumMasterName, setScrumMasterName] = useState('')
-  const [productOwnerName, setProductOwnerName] = useState('')
-  const [developers, setDevelopers] = useState([])
-  const [startDate, setStartDate] = useState('')
-  const [methodology, setMethodology] = useState('')
+function ProductForm({ product, setOpen, setProducts }) {
+  const [productName, setProductName] = useState(product ? product.productName : '')
+  const [scrumMasterName, setScrumMasterName] = useState(product ? product.scrumMasterName : '')
+  const [productOwnerName, setProductOwnerName] = useState(product ? product.productOwnerName : '')
+  const [developers, setDevelopers] = useState(product ? product.developers : [])
+  const [startDate, setStartDate] = useState(product ? product.startDate.replace(/\//g, '-') : '')
+  const [methodology, setMethodology] = useState(product ? product.methodology : '')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const data = await createProduct({
+
+    const newProduct = {
       productName,
       scrumMasterName,
       productOwnerName,
       developers,
-      startDate: startDate.replace(/-/g, '/'),
       methodology,
-    })
-    setProducts((prev) => [...prev, data])
+    }
+
+    if (product) {
+      const data = await updateProduct(product.productId, newProduct)
+      setProducts((prev) => {
+        const index = prev.findIndex((p) => p.productId === data.productId)
+        prev[index] = data
+        return prev
+      })
+    } else {
+      const data = await createProduct({
+        ...newProduct,
+        startDate: startDate.replace(/-/g, '/'),
+      })
+      setProducts((prev) => [...prev, data])
+    }
+
     setOpen(false)
   }
 
@@ -104,6 +120,7 @@ function ProductForm({ setOpen, setProducts }) {
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
               required
+              disabled={!!product}
             />
           </div>
           <div className="input-with-label">
