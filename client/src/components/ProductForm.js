@@ -6,7 +6,7 @@ function ProductForm({ setOpen, setProducts }) {
   const [productName, setProductName] = useState('')
   const [scrumMasterName, setScrumMasterName] = useState('')
   const [productOwnerName, setProductOwnerName] = useState('')
-  const [developerNames, setDeveloperNames] = useState([])
+  const [developers, setDevelopers] = useState([])
   const [startDate, setStartDate] = useState('')
   const [methodology, setMethodology] = useState('')
 
@@ -16,7 +16,7 @@ function ProductForm({ setOpen, setProducts }) {
       productName,
       scrumMasterName,
       productOwnerName,
-      developerNames,
+      developers,
       startDate: startDate.replace(/-/g, '/'),
       methodology,
     })
@@ -26,15 +26,15 @@ function ProductForm({ setOpen, setProducts }) {
 
   const handleClose = () => setOpen(false)
 
-  const handleDeveloperNameChange = (e, index) => {
-    const newDeveloperNames = [...developerNames]
-    newDeveloperNames[index] = e.target.value
-    setDeveloperNames(newDeveloperNames)
+  const handleDevelopersChange = (e, index) => {
+    const newDevelopers = [...developers]
+    newDevelopers[index] = e.target.value
+    setDevelopers(newDevelopers)
   }
 
-  const addDeveloperNameField = () => {
-    if (developerNames.length >= 5) return
-    setDeveloperNames([...developerNames, ''])
+  const addDeveloperField = () => {
+    if (developers.length >= 5) return
+    setDevelopers([...developers, ''])
   }
 
   return (
@@ -80,17 +80,17 @@ function ProductForm({ setOpen, setProducts }) {
           <div className="input-with-label">
             <label htmlFor="developers">Developers</label>
             <div className="inputs-container">
-              {developerNames.map((name, index) => (
+              {developers.map((name, index) => (
                 <input
                   key={index}
                   type="text"
                   value={name}
-                  onChange={(e) => handleDeveloperNameChange(e, index)}
+                  onChange={(e) => handleDevelopersChange(e, index)}
                   required={index === 0}
                 />
               ))}
-              {developerNames.length < 5 && (
-                <button type="button" onClick={addDeveloperNameField}>
+              {developers.length < 5 && (
+                <button type="button" onClick={addDeveloperField}>
                   Add Developer
                 </button>
               )}

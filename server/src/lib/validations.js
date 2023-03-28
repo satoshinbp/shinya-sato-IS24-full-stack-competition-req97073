@@ -1,10 +1,10 @@
-const validateDeveloperNames = (developerNames) => {
-  if (!isArrLengthInRange(developerNames, 1, 5)) {
-    throw new Error('Developer names field must be an array with 1 to 5 elements')
+const validateDevelopers = (developers) => {
+  if (!isArrLengthInRange(developers, 1, 5)) {
+    throw new Error('Developers field must be an array with 1 to 5 elements')
   }
 
   function isArrLengthInRange(arr, min, max) {
-    return Array.isArray(arr) && developerNames.length >= min && developerNames.length <= max
+    return Array.isArray(arr) && developers.length >= min && developers.length <= max
   }
 }
 
@@ -27,4 +27,4 @@ const validateMethodology = (methodology) => {
   }
 }
 
-export { validateDeveloperNames, validateStartDate, validateMethodology }
+export { validateDevelopers, validateStartDate, validateMethodology }

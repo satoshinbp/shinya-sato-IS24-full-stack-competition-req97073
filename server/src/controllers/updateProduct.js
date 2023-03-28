@@ -1,5 +1,5 @@
 import { readProductsFile, writeProductsFile } from '../lib/fs.js'
-import { validateDeveloperNames, validateMethodology } from '../lib/validations.js'
+import { validateDevelopers, validateMethodology } from '../lib/validations.js'
 
 const updateProduct = (req, res) => {
   try {
@@ -17,9 +17,9 @@ const updateProduct = (req, res) => {
   }
 
   function validateInput() {
-    const { developerNames, methodology } = req.body
-    if (developerNames) {
-      validateDeveloperNames(developerNames)
+    const { developers, methodology } = req.body
+    if (developers) {
+      validateDevelopers(developers)
     }
     if (methodology) {
       validateMethodology(methodology)
@@ -27,7 +27,7 @@ const updateProduct = (req, res) => {
   }
 
   function updateProduct(product) {
-    const { productName, productOwnerName, developerNames, scrumMasterName, methodology } = req.body
+    const { productName, productOwnerName, developers, scrumMasterName, methodology } = req.body
     const newProduct = { ...product }
     if (productName) {
       newProduct.productName = productName
@@ -35,8 +35,8 @@ const updateProduct = (req, res) => {
     if (productOwnerName) {
       newProduct.productOwnerName = productOwnerName
     }
-    if (developerNames) {
-      newProduct.developerNames = developerNames
+    if (developers) {
+      newProduct.developers = developers
     }
     if (scrumMasterName) {
       newProduct.scrumMasterName = scrumMasterName

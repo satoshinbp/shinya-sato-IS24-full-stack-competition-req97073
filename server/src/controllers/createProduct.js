@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 import { readProductsFile, writeProductsFile } from '../lib/fs.js'
-import { validateDeveloperNames, validateMethodology, validateStartDate } from '../lib/validations.js'
+import { validateDevelopers, validateMethodology, validateStartDate } from '../lib/validations.js'
 
 const createProduct = (req, res) => {
   try {
@@ -15,22 +15,22 @@ const createProduct = (req, res) => {
   }
 
   function validateInput() {
-    const { productName, productOwnerName, developerNames, scrumMasterName, startDate, methodology } = req.body
-    if (!productName || !productOwnerName || !developerNames || !scrumMasterName || !startDate || !methodology) {
+    const { productName, productOwnerName, developers, scrumMasterName, startDate, methodology } = req.body
+    if (!productName || !productOwnerName || !developers || !scrumMasterName || !startDate || !methodology) {
       throw new Error('All fields are required')
     }
-    validateDeveloperNames(developerNames)
+    validateDevelopers(developers)
     validateStartDate(startDate)
     validateMethodology(methodology)
   }
 
   function generateProduct() {
-    const { productName, productOwnerName, developerNames, scrumMasterName, startDate, methodology } = req.body
+    const { productName, productOwnerName, developers, scrumMasterName, startDate, methodology } = req.body
     return {
       productId: uuidv4(),
       productName,
       productOwnerName,
-      developerNames,
+      developers,
       scrumMasterName,
       startDate,
       methodology,

@@ -3,7 +3,7 @@
     "productId": "b44c77b6-c067-49a8-a35b-84fad232b796",
     "productName": "Tasty Metal Chips",
     "productOwnerName": "Everett Orn",
-    "developerNames": ["Jennifer VonRueden", "Pablo Simonis"],
+    "developers": ["Jennifer VonRueden", "Pablo Simonis"],
     "scrumMasterName": "Melinda Jones",
     "startDate": "2022/10/22",
     "methodology": "Agile"
@@ -12,7 +12,7 @@
     "productId": "986238b5-da5f-49b8-b9b2-4fac7d181385",
     "productName": "Small Rubber Car",
     "productOwnerName": "Geneva Kirlin",
-    "developerNames": ["Robin Glover", "Lance Reinger", "Cathy Gerlach", "Misty Blick"],
+    "developers": ["Robin Glover", "Lance Reinger", "Cathy Gerlach", "Misty Blick"],
     "scrumMasterName": "Dana Buckridge",
     "startDate": "2023/03/24",
     "methodology": "Waterfall"
@@ -21,7 +21,7 @@
     "productId": "2953014b-589d-4348-bd0d-f34e50f86bcd",
     "productName": "Oriental Steel Table",
     "productOwnerName": "Bradley Dickinson",
-    "developerNames": ["Lindsey Reynolds"],
+    "developers": ["Lindsey Reynolds"],
     "scrumMasterName": "Nellie Ernser",
     "startDate": "2022/04/14",
     "methodology": "Agile"
@@ -30,7 +30,7 @@
     "productId": "7e5d9b1c-b826-470a-8d3e-6be773e2e216",
     "productName": "Small Soft Shirt",
     "productOwnerName": "Bradley Trantow II",
-    "developerNames": ["Muriel Schaefer", "Lila Metz", "Belinda Brakus"],
+    "developers": ["Muriel Schaefer", "Lila Metz", "Belinda Brakus"],
     "scrumMasterName": "Mr. Gregory Ruecker",
     "startDate": "2022/06/16",
     "methodology": "Waterfall"
@@ -39,7 +39,7 @@
     "productId": "3cd32153-10ec-484a-8096-b852eec26987",
     "productName": "Modern Cotton Pizza",
     "productOwnerName": "Kathy Donnelly",
-    "developerNames": ["Arturo Emmerich", "Kara Hudson DVM"],
+    "developers": ["Arturo Emmerich", "Kara Hudson DVM"],
     "scrumMasterName": "Simon Murray",
     "startDate": "2022/06/16",
     "methodology": "Agile"
@@ -48,7 +48,7 @@
     "productId": "2d8e2072-9471-404c-bc31-6137809ae346",
     "productName": "Rustic Cotton Fish",
     "productOwnerName": "Rosie Bayer",
-    "developerNames": ["Duane Smitham", "Mrs. Amos Keeling", "Irene Daugherty", "Erika Wiegand"],
+    "developers": ["Duane Smitham", "Mrs. Amos Keeling", "Irene Daugherty", "Erika Wiegand"],
     "scrumMasterName": "Kellie Lang",
     "startDate": "2022/06/26",
     "methodology": "Agile"
@@ -57,7 +57,7 @@
     "productId": "cac9bf6c-64a0-414e-aedd-0f4505e31108",
     "productName": "Oriental Cotton Pants",
     "productOwnerName": "Drew Miller",
-    "developerNames": ["Lynda Hills", "Ms. Dominic Wisoky", "Patti Williamson", "Joey Konopelski"],
+    "developers": ["Lynda Hills", "Ms. Dominic Wisoky", "Patti Williamson", "Joey Konopelski"],
     "scrumMasterName": "Ms. Howard Raynor",
     "startDate": "2022/05/13",
     "methodology": "Agile"
@@ -66,13 +66,7 @@
     "productId": "eb7afc17-6f55-4bb5-83e6-1b66545d3e21",
     "productName": "Electronic Soft Keyboard",
     "productOwnerName": "Wayne Simonis",
-    "developerNames": [
-      "Jeanne Medhurst",
-      "Annie Schroeder",
-      "Toni Schaden PhD",
-      "Aaron Deckow",
-      "Mr. Andres Murazik DVM"
-    ],
+    "developers": ["Jeanne Medhurst", "Annie Schroeder", "Toni Schaden PhD", "Aaron Deckow", "Mr. Andres Murazik DVM"],
     "scrumMasterName": "Carl Hermiston",
     "startDate": "2022/06/18",
     "methodology": "Waterfall"
@@ -81,7 +75,7 @@
     "productId": "250a47aa-2578-4865-a9a1-4ecb7005b922",
     "productName": "Unbranded Soft Sausages",
     "productOwnerName": "Kellie Pollich",
-    "developerNames": ["Blake Wintheiser Sr.", "Ms. Billy Reynolds", "Nelson Weber"],
+    "developers": ["Blake Wintheiser Sr.", "Ms. Billy Reynolds", "Nelson Weber"],
     "scrumMasterName": "Benny Marvin",
     "startDate": "2023/02/28",
     "methodology": "Waterfall"
@@ -90,7 +84,7 @@
     "productId": "29c3a6d3-9225-4f92-a254-a495d03b7f88",
     "productName": "Electronic Concrete Fish",
     "productOwnerName": "Winifred Yost",
-    "developerNames": ["Courtney Gutmann"],
+    "developers": ["Courtney Gutmann"],
     "scrumMasterName": "Eric Goodwin",
     "startDate": "2023/03/22",
     "methodology": "Agile"
@@ -99,7 +93,7 @@
     "productId": "3049fc49-b17b-4cc4-9b73-d7ecb4869431",
     "productName": "Handmade Frozen Salad",
     "productOwnerName": "Samantha Shields",
-    "developerNames": ["Leigh Bauch", "Patricia Bayer"],
+    "developers": ["Leigh Bauch", "Patricia Bayer"],
     "scrumMasterName": "Rene Brekke",
     "startDate": "2022/07/23",
     "methodology": "Agile"
@@ -108,13 +102,7 @@
     "productId": "4a5d5d91-f93a-43c5-abf3-c5d3afba55e0",
     "productName": "Handcrafted Plastic Ball",
     "productOwnerName": "Jaime Metz",
-    "developerNames": [
-      "Daniel Kshlerin",
-      "Elisa McDermott PhD",
-      "Miss Marianne Roob",
-      "Francis Stokes",
-      "Fernando White"
-    ],
+    "developers": ["Daniel Kshlerin", "Elisa McDermott PhD", "Miss Marianne Roob", "Francis Stokes", "Fernando White"],
     "scrumMasterName": "Kristie Mertz",
     "startDate": "2022/04/06",
     "methodology": "Agile"
@@ -123,7 +111,7 @@
     "productId": "d9c7fb37-4464-4d72-85e8-2d21b51ed662",
     "productName": "Fantastic Bronze Chicken",
     "productOwnerName": "Gilberto Ferry",
-    "developerNames": ["Miss Grace Ryan", "Nina Block", "Grace Kohler", "Lee Rolfson"],
+    "developers": ["Miss Grace Ryan", "Nina Block", "Grace Kohler", "Lee Rolfson"],
     "scrumMasterName": "Noel Beatty",
     "startDate": "2022/10/21",
     "methodology": "Agile"
@@ -132,7 +120,7 @@
     "productId": "5adcf602-02e0-4e83-8721-6b18185aaa94",
     "productName": "Sleek Steel Shirt",
     "productOwnerName": "Gilbert Thiel",
-    "developerNames": ["Hubert Beier"],
+    "developers": ["Hubert Beier"],
     "scrumMasterName": "Norman Leuschke",
     "startDate": "2023/01/28",
     "methodology": "Agile"
@@ -141,7 +129,7 @@
     "productId": "266604d1-c70b-460d-b3f4-e82da1ad158e",
     "productName": "Generic Soft Sausages",
     "productOwnerName": "Lula Reichert",
-    "developerNames": ["Lamar Dach", "Sheri Ullrich", "Roberta Koss IV", "Caleb Casper", "Ramona Hermiston V"],
+    "developers": ["Lamar Dach", "Sheri Ullrich", "Roberta Koss IV", "Caleb Casper", "Ramona Hermiston V"],
     "scrumMasterName": "Wendy Walker DDS",
     "startDate": "2022/06/21",
     "methodology": "Waterfall"
@@ -150,7 +138,7 @@
     "productId": "a8482c04-7c4b-4b36-90ff-c8e6f45ce900",
     "productName": "Practical Concrete Shirt",
     "productOwnerName": "Dixie Greenfelder",
-    "developerNames": ["Ross Hintz"],
+    "developers": ["Ross Hintz"],
     "scrumMasterName": "Sam Breitenberg Jr.",
     "startDate": "2022/08/23",
     "methodology": "Agile"
@@ -159,7 +147,7 @@
     "productId": "f8d52967-2234-4fe3-bb38-8644cd59d4f2",
     "productName": "Luxurious Frozen Ball",
     "productOwnerName": "Pauline Flatley",
-    "developerNames": ["Mr. Manuel Auer", "Dr. Bessie Hahn", "Jamie Orn", "Wade Ward"],
+    "developers": ["Mr. Manuel Auer", "Dr. Bessie Hahn", "Jamie Orn", "Wade Ward"],
     "scrumMasterName": "Mrs. Diana O'Conner",
     "startDate": "2022/11/07",
     "methodology": "Waterfall"
@@ -168,7 +156,7 @@
     "productId": "9eaf2f04-071a-40a2-b82f-373611873939",
     "productName": "Unbranded Frozen Bacon",
     "productOwnerName": "Samantha Dicki",
-    "developerNames": ["Bert Grady", "Mr. Angel Mante"],
+    "developers": ["Bert Grady", "Mr. Angel Mante"],
     "scrumMasterName": "Darrell Doyle",
     "startDate": "2022/05/19",
     "methodology": "Agile"
@@ -177,7 +165,7 @@
     "productId": "6dfe571f-710c-49d2-b83c-6ab4ac2e6498",
     "productName": "Generic Rubber Table",
     "productOwnerName": "Wilbert Aufderhar",
-    "developerNames": ["Whitney Walter"],
+    "developers": ["Whitney Walter"],
     "scrumMasterName": "Christina Strosin",
     "startDate": "2022/06/10",
     "methodology": "Agile"
@@ -186,7 +174,7 @@
     "productId": "f7c06da2-a7d0-44ee-89fb-1d4216a35ae2",
     "productName": "Recycled Cotton Cheese",
     "productOwnerName": "Kara Larson",
-    "developerNames": ["Ken Streich"],
+    "developers": ["Ken Streich"],
     "scrumMasterName": "Elsie Rohan",
     "startDate": "2022/11/02",
     "methodology": "Waterfall"
@@ -195,7 +183,7 @@
     "productId": "2472b873-1419-4b37-820e-3600c30938f6",
     "productName": "Luxurious Bronze Pizza",
     "productOwnerName": "Karen VonRueden Jr.",
-    "developerNames": ["Julio Bosco", "Penny Sawayn", "Rene Cormier"],
+    "developers": ["Julio Bosco", "Penny Sawayn", "Rene Cormier"],
     "scrumMasterName": "Clifford Will",
     "startDate": "2023/02/19",
     "methodology": "Waterfall"
@@ -204,7 +192,7 @@
     "productId": "c44031e1-9578-49ee-a5d7-41cd49ef2b56",
     "productName": "Tasty Granite Salad",
     "productOwnerName": "Susan Balistreri",
-    "developerNames": ["Carrie Heller", "Clayton Schuppe", "Irvin Marvin"],
+    "developers": ["Carrie Heller", "Clayton Schuppe", "Irvin Marvin"],
     "scrumMasterName": "Erick Schowalter",
     "startDate": "2023/03/13",
     "methodology": "Agile"
@@ -213,7 +201,7 @@
     "productId": "7af88e05-9d6b-4fe5-bb21-d65ab465d2bd",
     "productName": "Gorgeous Plastic Tuna",
     "productOwnerName": "Tommie Schinner",
-    "developerNames": ["Beulah Schaefer I", "Andrew Hills"],
+    "developers": ["Beulah Schaefer I", "Andrew Hills"],
     "scrumMasterName": "Jorge Nicolas",
     "startDate": "2023/01/29",
     "methodology": "Waterfall"
@@ -222,7 +210,7 @@
     "productId": "0fd7d662-4468-4314-a85a-6cd1068bf4db",
     "productName": "Tasty Wooden Chicken",
     "productOwnerName": "Darryl Bednar",
-    "developerNames": ["Angel Schaefer"],
+    "developers": ["Angel Schaefer"],
     "scrumMasterName": "Lisa Spencer",
     "startDate": "2022/08/30",
     "methodology": "Agile"
@@ -231,7 +219,7 @@
     "productId": "4d1b82fe-ce39-40ac-9045-694e1105d625",
     "productName": "Refined Granite Hat",
     "productOwnerName": "Beth Murazik",
-    "developerNames": ["Lila Wisoky", "Lucas Hagenes", "Emily Predovic", "Elbert Bechtelar"],
+    "developers": ["Lila Wisoky", "Lucas Hagenes", "Emily Predovic", "Elbert Bechtelar"],
     "scrumMasterName": "Ora Wiza",
     "startDate": "2023/01/02",
     "methodology": "Waterfall"
@@ -240,7 +228,7 @@
     "productId": "7b920244-8561-4aa2-80e9-0ec25ef4a302",
     "productName": "Generic Bronze Chips",
     "productOwnerName": "George Bernhard",
-    "developerNames": [
+    "developers": [
       "David Predovic",
       "Mrs. Ernesto Goyette",
       "Clifford Little IV",
@@ -255,7 +243,7 @@
     "productId": "dd700510-3da2-4926-9611-afd3573af3f0",
     "productName": "Licensed Concrete Shoes",
     "productOwnerName": "Jamie Auer",
-    "developerNames": ["Tracy Lang", "Rhonda Bailey", "Cynthia McCullough", "Oliver Heaney", "Trevor Shanahan"],
+    "developers": ["Tracy Lang", "Rhonda Bailey", "Cynthia McCullough", "Oliver Heaney", "Trevor Shanahan"],
     "scrumMasterName": "Mrs. Kerry Roberts",
     "startDate": "2022/12/25",
     "methodology": "Agile"
@@ -264,7 +252,7 @@
     "productId": "c7604e15-335f-4966-9fb4-4d998c33da6a",
     "productName": "Tasty Metal Table",
     "productOwnerName": "Jesse Jenkins",
-    "developerNames": ["Jacqueline Windler", "June Koch"],
+    "developers": ["Jacqueline Windler", "June Koch"],
     "scrumMasterName": "Myron McClure",
     "startDate": "2023/01/21",
     "methodology": "Waterfall"
@@ -273,7 +261,7 @@
     "productId": "a5fc07cc-1e2d-4fc9-aaf1-76bd4165f0e0",
     "productName": "Licensed Cotton Bacon",
     "productOwnerName": "Stacey Goyette",
-    "developerNames": ["Ian Kuhic IV", "Brandy Pouros", "Donna Schaefer", "Shaun Schamberger"],
+    "developers": ["Ian Kuhic IV", "Brandy Pouros", "Donna Schaefer", "Shaun Schamberger"],
     "scrumMasterName": "Stacey Hauck",
     "startDate": "2022/12/03",
     "methodology": "Agile"
@@ -282,7 +270,7 @@
     "productId": "0b8c42f3-49ff-4923-8fe5-5a6d2d2cd03b",
     "productName": "Gorgeous Concrete Chicken",
     "productOwnerName": "Johnnie Kutch",
-    "developerNames": ["Marc Bednar", "Carl Wisoky", "Darrel Barrows", "Tracy Hilpert"],
+    "developers": ["Marc Bednar", "Carl Wisoky", "Darrel Barrows", "Tracy Hilpert"],
     "scrumMasterName": "Wesley Harvey",
     "startDate": "2022/07/22",
     "methodology": "Waterfall"
@@ -291,13 +279,7 @@
     "productId": "e728a8cb-fc5a-4894-a9c0-e78c02044c05",
     "productName": "Bespoke Concrete Soap",
     "productOwnerName": "Antoinette Jacobi",
-    "developerNames": [
-      "Miss Christopher Volkman",
-      "Ramiro Cassin",
-      "Leah Thiel",
-      "Julia O'Connell",
-      "Stephen Oberbrunner"
-    ],
+    "developers": ["Miss Christopher Volkman", "Ramiro Cassin", "Leah Thiel", "Julia O'Connell", "Stephen Oberbrunner"],
     "scrumMasterName": "Guadalupe Purdy",
     "startDate": "2022/12/22",
     "methodology": "Waterfall"
@@ -306,13 +288,7 @@
     "productId": "77d7db56-bd1a-4931-867d-0f218df734cf",
     "productName": "Ergonomic Steel Shirt",
     "productOwnerName": "Vanessa Ortiz",
-    "developerNames": [
-      "Mr. Wilbert Emmerich III",
-      "Brad Heaney",
-      "Freddie Rau",
-      "Kathleen Kassulke III",
-      "Marcia Goyette"
-    ],
+    "developers": ["Mr. Wilbert Emmerich III", "Brad Heaney", "Freddie Rau", "Kathleen Kassulke III", "Marcia Goyette"],
     "scrumMasterName": "Dr. Lloyd Schumm",
     "startDate": "2022/11/15",
     "methodology": "Agile"
@@ -321,7 +297,7 @@
     "productId": "9038cd88-c319-405b-b8d2-f6cf36619c18",
     "productName": "Rustic Steel Shirt",
     "productOwnerName": "Vivian Schinner",
-    "developerNames": ["Mr. Ellis Farrell", "Ricky Reichert"],
+    "developers": ["Mr. Ellis Farrell", "Ricky Reichert"],
     "scrumMasterName": "Amelia Runolfsson",
     "startDate": "2022/06/22",
     "methodology": "Agile"
@@ -330,7 +306,7 @@
     "productId": "b33d4688-c3a9-43f4-a755-bf76810fcfcf",
     "productName": "Unbranded Bronze Towels",
     "productOwnerName": "Miss Andre Gutkowski IV",
-    "developerNames": ["Micheal Casper", "Naomi McLaughlin", "Dr. Viola Pagac", "Margaret Streich", "Teresa Torphy"],
+    "developers": ["Micheal Casper", "Naomi McLaughlin", "Dr. Viola Pagac", "Margaret Streich", "Teresa Torphy"],
     "scrumMasterName": "Evan Kihn",
     "startDate": "2022/11/06",
     "methodology": "Waterfall"
@@ -339,7 +315,7 @@
     "productId": "2a6a7f98-f12e-47f8-8ce5-6860288bad14",
     "productName": "Tasty Concrete Bacon",
     "productOwnerName": "Mattie Marks",
-    "developerNames": ["Nora Hegmann", "Alma Goodwin Sr.", "Tami Johnston", "Caleb Cole"],
+    "developers": ["Nora Hegmann", "Alma Goodwin Sr.", "Tami Johnston", "Caleb Cole"],
     "scrumMasterName": "Mrs. Charlie Smitham",
     "startDate": "2022/12/08",
     "methodology": "Waterfall"
@@ -348,7 +324,7 @@
     "productId": "cb6f1989-019b-457c-a3eb-3dbce20506a6",
     "productName": "Rustic Fresh Sausages",
     "productOwnerName": "Fannie Braun",
-    "developerNames": ["Mrs. Jason Bins"],
+    "developers": ["Mrs. Jason Bins"],
     "scrumMasterName": "Rogelio Olson",
     "startDate": "2023/01/03",
     "methodology": "Agile"
@@ -357,7 +333,7 @@
     "productId": "15eaec70-b032-48ff-9ae7-0411889dee8c",
     "productName": "Licensed Fresh Computer",
     "productOwnerName": "Andrea Kertzmann Jr.",
-    "developerNames": ["Spencer O'Kon", "Jacob Baumbach", "Lillian Leannon", "Angela McLaughlin II", "Sonja Connelly"],
+    "developers": ["Spencer O'Kon", "Jacob Baumbach", "Lillian Leannon", "Angela McLaughlin II", "Sonja Connelly"],
     "scrumMasterName": "Kerry Murray",
     "startDate": "2023/01/15",
     "methodology": "Agile"
@@ -366,7 +342,7 @@
     "productId": "d8c3482e-a8e5-45fa-a9c4-b64995ba63dc",
     "productName": "Refined Steel Chair",
     "productOwnerName": "Mrs. Carmen Davis",
-    "developerNames": ["Jorge Kiehn", "Warren Ratke"],
+    "developers": ["Jorge Kiehn", "Warren Ratke"],
     "scrumMasterName": "Christian Abbott",
     "startDate": "2022/07/21",
     "methodology": "Waterfall"
@@ -375,7 +351,7 @@
     "productId": "8cdca820-6dd1-4bc2-9cbd-ff2ece39986c",
     "productName": "Incredible Bronze Fish",
     "productOwnerName": "Mike Bashirian",
-    "developerNames": ["Bonnie Quigley"],
+    "developers": ["Bonnie Quigley"],
     "scrumMasterName": "Javier Goldner",
     "startDate": "2023/02/26",
     "methodology": "Waterfall"
@@ -384,7 +360,7 @@
     "productId": "a330ed4b-2c85-4a12-a006-d79d8128fb19",
     "productName": "Awesome Soft Soap",
     "productOwnerName": "Frankie Roberts",
-    "developerNames": ["Saul Mitchell", "Dr. Hubert Mosciski", "Mae Beer PhD", "Stephen Champlin", "Kent Stokes"],
+    "developers": ["Saul Mitchell", "Dr. Hubert Mosciski", "Mae Beer PhD", "Stephen Champlin", "Kent Stokes"],
     "scrumMasterName": "Dwayne Schroeder",
     "startDate": "2023/01/05",
     "methodology": "Agile"

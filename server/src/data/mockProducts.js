@@ -9,7 +9,7 @@ const mockProducts = (length = 40) =>
     const productId = faker.datatype.uuid()
     const productName = faker.commerce.productName()
     const productOwnerName = faker.name.fullName()
-    const developerNames = Array.from({ length: generateRandomInt(1, 5) }, () => faker.name.fullName())
+    const developers = Array.from({ length: generateRandomInt(1, 5) }, () => faker.name.fullName())
     const scrumMasterName = faker.name.fullName()
     const startDate = format(faker.date.past(), 'yyyy/MM/dd')
     const methodology = faker.helpers.arrayElement(['Agile', 'Waterfall'])
@@ -18,7 +18,7 @@ const mockProducts = (length = 40) =>
       productId,
       productName,
       productOwnerName,
-      developerNames,
+      developers,
       scrumMasterName,
       startDate,
       methodology,
