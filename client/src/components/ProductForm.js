@@ -65,11 +65,18 @@ function ProductForm({ product, setOpen, setProducts }) {
     setDevelopers([...developers, ''])
   }
 
+  const removeDeveloperField = (index) => () => {
+    if (developers.length === 1) return
+    const newDevelopers = [...developers]
+    newDevelopers.splice(index, 1)
+    setDevelopers(newDevelopers)
+  }
+
   return (
     <div className="modal">
       <div className="modal-content">
         <div className="modal-header">
-          <h2>Create Product</h2>
+          <h2>{`${product ? 'Update' : 'Create'} Product`}</h2>
           <span className="close" onClick={handleClose}>
             &times;
           </span>
@@ -113,13 +120,12 @@ function ProductForm({ product, setOpen, setProducts }) {
             <label htmlFor="developers">Developers</label>
             <div className="inputs-container">
               {developers.map((name, index) => (
-                <input
-                  key={index}
-                  type="text"
-                  value={name}
-                  onChange={(e) => handleDevelopersChange(e, index)}
-                  required={index === 0}
-                />
+                <div key={index} className="input-with-clear">
+                  <input type="text" value={name} onChange={(e) => handleDevelopersChange(e, index)} required />
+                  <span className="close" onClick={removeDeveloperField(index)}>
+                    &times;
+                  </span>
+                </div>
               ))}
               {developers.length < 5 && (
                 <button type="button" onClick={addDeveloperField}>
@@ -151,7 +157,7 @@ function ProductForm({ product, setOpen, setProducts }) {
           </div>
 
           <div className="modal-action">
-            <button type="submit">Submit</button>
+            <button type="submit">Save</button>
             <button type="button" className="button-secondary" onClick={handleClose}>
               Close
             </button>

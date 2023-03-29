@@ -113,6 +113,12 @@ form {
   gap: 0.5rem;
 }
 
+.input-with-clear {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .inputs-container {
   display: flex;
   flex-flow: column;
