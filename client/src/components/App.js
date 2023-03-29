@@ -101,6 +101,7 @@ function App() {
       <table>
         <thead>
           <tr>
+            <th />
             <th>ID</th>
             <th>Name</th>
             <th>Scrum Master</th>
@@ -112,13 +113,17 @@ function App() {
         </thead>
         <tbody>
           {filteredProducts.map((product, i) => (
-            <tr
-              key={i}
-              onClick={() => {
-                setProduct(product)
-                setOpen(true)
-              }}
-            >
+            <tr key={i}>
+              <td>
+                <button
+                  onClick={() => {
+                    setProduct(product)
+                    setOpen(true)
+                  }}
+                >
+                  Edit
+                </button>
+              </td>
               <td>{product.productId}</td>
               <td>{product.productName}</td>
               <td>{product.scrumMasterName}</td>
