@@ -9,9 +9,14 @@ function App() {
   const [product, setProduct] = useState(null)
   const [products, setProducts] = useState([])
   const [scrumMasterName, setScrumMasterName] = useState('')
+  const [developer, setDeveloper] = useState('')
 
   const scrumMasterNames = _.uniq(products.map((p) => p.scrumMasterName))
-  const filteredProducts = products.filter((p) => !scrumMasterName || p.scrumMasterName === scrumMasterName)
+  const developers = _.uniq(products.flatMap((p) => p.developers))
+
+  const filteredProducts = products
+    .filter((p) => !scrumMasterName || p.scrumMasterName === scrumMasterName)
+    .filter((p) => !developer || p.developers.includes(developer))
 
   useEffect(() => {
     const fetchAndSetProducts = async () => {
@@ -44,6 +49,17 @@ function App() {
             {scrumMasterNames.map((name, i) => (
               <option value={name} key={i}>
                 {name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="input-with-label">
+          <label htmlFor="scrum-master">Developer</label>
+          <select id="filter-developer" value={developer} onChange={(e) => setDeveloper(e.target.value)}>
+            <option value="">Select Developer</option>
+            {developers.map((dev, i) => (
+              <option value={dev} key={i}>
+                {dev}
               </option>
             ))}
           </select>
