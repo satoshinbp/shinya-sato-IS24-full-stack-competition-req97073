@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import createProduct from '../api/createProduct'
 import updateProduct from '../api/updateProduct'
-import '../App.css'
+import '../styles/App.css'
 
 function ProductForm({ product, setOpen, setProducts }) {
   const [productName, setProductName] = useState(product ? product.productName : '')

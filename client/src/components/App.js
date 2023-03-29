@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import fetchProducts from './api/fetchProducts'
-import './App.css'
-import ProductForm from './components/ProductForm'
+import ProductForm from './ProductForm'
+import fetchProducts from '../api/fetchProducts'
+import '../styles/App.css'
 
 function App() {
   const [open, setOpen] = useState(false)
