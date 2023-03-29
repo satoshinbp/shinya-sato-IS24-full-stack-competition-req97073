@@ -3,6 +3,10 @@ const validateDevelopers = (developers) => {
     throw new Error('Developers field must be an array with 1 to 5 elements')
   }
 
+  if (developers.some((d) => !d)) {
+    throw new Error('Each developer field must not be empty string')
+  }
+
   function isArrLengthInRange(arr, min, max) {
     return Array.isArray(arr) && developers.length >= min && developers.length <= max
   }
