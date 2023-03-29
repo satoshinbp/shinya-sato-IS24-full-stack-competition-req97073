@@ -20,8 +20,12 @@ function App() {
 
   useEffect(() => {
     const fetchAndSetProducts = async () => {
-      const data = await fetchProducts()
-      setProducts(data)
+      try {
+        const data = await fetchProducts()
+        setProducts(data)
+      } catch (err) {
+        console.error('Error fetching product:', err)
+      }
     }
     fetchAndSetProducts()
   }, [])

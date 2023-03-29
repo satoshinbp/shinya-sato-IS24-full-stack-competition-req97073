@@ -7,7 +7,7 @@ function ProductForm({ product, setOpen, setProducts }) {
   const [productName, setProductName] = useState(product ? product.productName : '')
   const [scrumMasterName, setScrumMasterName] = useState(product ? product.scrumMasterName : '')
   const [productOwnerName, setProductOwnerName] = useState(product ? product.productOwnerName : '')
-  const [developers, setDevelopers] = useState(product ? product.developers : [])
+  const [developers, setDevelopers] = useState(product ? product.developers : [''])
   const [startDate, setStartDate] = useState(product ? product.startDate.replace(/\//g, '-') : '')
   const [methodology, setMethodology] = useState(product ? product.methodology : '')
 
@@ -22,22 +22,34 @@ function ProductForm({ product, setOpen, setProducts }) {
       methodology,
     }
 
-    if (product) {
-      const data = await updateProduct(product.productId, newProduct)
-      setProducts((prev) => {
-        const index = prev.findIndex((p) => p.productId === data.productId)
-        prev[index] = data
-        return prev
-      })
-    } else {
-      const data = await createProduct({
-        ...newProduct,
-        startDate: startDate.replace(/-/g, '/'),
-      })
-      setProducts((prev) => [...prev, data])
-    }
+    product ? await updateAndSetProduct(newProduct) : await createAndSetProduct(newProduct)
 
     setOpen(false)
+
+    async function updateAndSetProduct(newProduct) {
+      try {
+        const data = await updateProduct(product.productId, newProduct)
+        setProducts((prev) => {
+          const index = prev.findIndex((p) => p.productId === data.productId)
+          prev[index] = data
+          return prev
+        })
+      } catch (err) {
+        console.error('Error updating product:', err)
+      }
+    }
+
+    async function createAndSetProduct(newProduct) {
+      try {
+        const data = await createProduct({
+          ...newProduct,
+          startDate: startDate.replace(/-/g, '/'),
+        })
+        setProducts((prev) => [...prev, data])
+      } catch (err) {
+        console.error('Error creating product:', err)
+      }
+    }
   }
 
   const handleClose = () => setOpen(false)
