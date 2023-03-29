@@ -11,6 +11,24 @@ header {
   align-items: center;
 }
 
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+@media only screen and (max-width: 600px) {
+  .toolbar {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
+
+.filter {
+  display: grid;
+  gap: 1rem;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -48,6 +66,7 @@ tr:nth-child(even) {
 .modal-content {
   background-color: #fefefe;
   width: 50%;
+  min-width: 300px;
   max-width: 600px;
   margin: 0 auto;
   padding: 1.5rem;
@@ -68,7 +87,6 @@ tr:nth-child(even) {
   display: flex;
   justify-content: end;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .close {
@@ -83,11 +101,16 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
+form {
+  display: grid;
+  gap: 1rem;
+}
+
 .input-with-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0;
+  gap: 0.5rem;
 }
 
 .inputs-container {

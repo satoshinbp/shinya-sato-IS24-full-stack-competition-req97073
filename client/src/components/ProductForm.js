@@ -62,6 +62,7 @@ function ProductForm({ product, setOpen, setProducts }) {
             &times;
           </span>
         </div>
+
         <form onSubmit={handleSubmit}>
           <div className="input-with-label">
             <label htmlFor="name">Name</label>
@@ -73,6 +74,7 @@ function ProductForm({ product, setOpen, setProducts }) {
               required
             />
           </div>
+
           <div className="input-with-label">
             <label htmlFor="scrum-master">Scrum Master</label>
             <input
@@ -83,6 +85,7 @@ function ProductForm({ product, setOpen, setProducts }) {
               required
             />
           </div>
+
           <div className="input-with-label">
             <label htmlFor="owner">Owner</label>
             <input
@@ -93,6 +96,7 @@ function ProductForm({ product, setOpen, setProducts }) {
               required
             />
           </div>
+
           <div className="input-with-label">
             <label htmlFor="developers">Developers</label>
             <div className="inputs-container">
@@ -112,6 +116,7 @@ function ProductForm({ product, setOpen, setProducts }) {
               )}
             </div>
           </div>
+
           <div className="input-with-label">
             <label htmlFor="start-date">Start Date</label>
             <input
@@ -123,6 +128,7 @@ function ProductForm({ product, setOpen, setProducts }) {
               disabled={!!product}
             />
           </div>
+
           <div className="input-with-label">
             <label htmlFor="methodology">Methodology</label>
             <select id="methodology" value={methodology} onChange={(e) => setMethodology(e.target.value)} required>
@@ -131,6 +137,7 @@ function ProductForm({ product, setOpen, setProducts }) {
               <option value="Waterfall">Waterfall</option>
             </select>
           </div>
+
           <div className="modal-action">
             <button type="submit">Submit</button>
             <button type="button" className="button-secondary" onClick={handleClose}>
