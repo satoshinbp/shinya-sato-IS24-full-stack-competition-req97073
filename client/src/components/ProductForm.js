@@ -3,6 +3,7 @@ import createProduct from '../api/createProduct'
 import updateProduct from '../api/updateProduct'
 import '../styles/App.css'
 
+// product to be provided when updating product, not to be provided when creating product
 function ProductForm({ product, setOpen, setProducts }) {
   const [productName, setProductName] = useState(product ? product.productName : '')
   const [scrumMasterName, setScrumMasterName] = useState(product ? product.scrumMasterName : '')
@@ -28,7 +29,7 @@ function ProductForm({ product, setOpen, setProducts }) {
 
     async function updateAndSetProduct(newProduct) {
       try {
-        const data = await updateProduct(product.productId, newProduct)
+        const data = await updateProduct(product.productId, newProduct) // startDate can't be updated
         setProducts((prev) => {
           const index = prev.findIndex((p) => p.productId === data.productId)
           prev[index] = data
@@ -43,9 +44,9 @@ function ProductForm({ product, setOpen, setProducts }) {
       try {
         const data = await createProduct({
           ...newProduct,
-          startDate: startDate.replace(/-/g, '/'),
+          startDate: startDate.replace(/-/g, '/'), // startDate can be created
         })
-        setProducts((prev) => [...prev, data])
+        setProducts((prev) => [...prev, data]) // add the newly created product to the products
       } catch (err) {
         console.error('Error creating product:', err)
       }
