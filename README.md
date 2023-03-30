@@ -14,7 +14,6 @@ Clone the GitHub repository to your local machine. Ensure that you have Node.js 
 
 - The client application will be running on http://localhost:8000
 
-
 ### How to run server
 
 - Navigate to the server directory using the command: `cd server`
@@ -31,4 +30,4 @@ Clone the GitHub repository to your local machine. Ensure that you have Node.js 
 
 - Frontend Web Application Framework: React.js
 
-- Swagger Documentation: Available at http://localhost:3000/api-docs when the server is running
+- Swagger Documentation: Available at http://localhost:3000/api/api-docs when the server is running
