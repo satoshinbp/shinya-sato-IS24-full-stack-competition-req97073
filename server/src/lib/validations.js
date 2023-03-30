@@ -25,8 +25,8 @@ const validateStartDate = (startDate) => {
 }
 
 const validateMethodology = (methodology) => {
-  const METHODOLOGY_OPTIONS = ['Agile', 'Waterfall']
-  if (!METHODOLOGY_OPTIONS.includes(methodology)) {
+  const methodologyOptions = ['Agile', 'Waterfall']
+  if (!methodologyOptions.includes(methodology)) {
     throw new Error('Methodology must be Agile or Waterfall')
   }
 }

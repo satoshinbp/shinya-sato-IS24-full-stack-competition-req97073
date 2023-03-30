@@ -4,37 +4,48 @@ import { validateDevelopers, validateMethodology, validateStartDate } from '../l
 
 const createProduct = (req, res) => {
   try {
-    validateInput()
-    const products = readProductsFile()
-    const newProduct = generateProduct()
-    products.push(newProduct)
-    writeProductsFile(products)
-    res.status(201).json(newProduct)
-  } catch (err) {
-    res.status(400).json({ error: err.message })
-  }
-
-  function validateInput() {
     const { productName, productOwnerName, developers, scrumMasterName, startDate, methodology } = req.body
-    if (!productName || !productOwnerName || !developers || !scrumMasterName || !startDate || !methodology) {
-      throw new Error('All fields are required')
-    }
-    validateDevelopers(developers)
-    validateStartDate(startDate)
-    validateMethodology(methodology)
-  }
 
-  function generateProduct() {
-    const { productName, productOwnerName, developers, scrumMasterName, startDate, methodology } = req.body
-    return {
-      productId: uuidv4(),
+    validateInput({ productName, productOwnerName, developers, scrumMasterName, startDate, methodology })
+
+    const newProduct = generateProduct({
       productName,
       productOwnerName,
       developers,
       scrumMasterName,
       startDate,
       methodology,
-    }
+    })
+
+    // Write the new product to the file
+    const products = readProductsFile()
+    products.push(newProduct)
+    writeProductsFile(products)
+
+    res.status(201).json(newProduct)
+  } catch (err) {
+    res.status(400).json({ error: err.message })
+  }
+}
+
+const validateInput = ({ productName, productOwnerName, developers, scrumMasterName, startDate, methodology }) => {
+  if (!productName || !productOwnerName || !developers || !scrumMasterName || !startDate || !methodology) {
+    throw new Error('All fields are required')
+  }
+  validateDevelopers(developers)
+  validateStartDate(startDate)
+  validateMethodology(methodology)
+}
+
+const generateProduct = ({ productName, productOwnerName, developers, scrumMasterName, startDate, methodology }) => {
+  return {
+    productId: uuidv4(),
+    productName,
+    productOwnerName,
+    developers,
+    scrumMasterName,
+    startDate,
+    methodology,
   }
 }
 

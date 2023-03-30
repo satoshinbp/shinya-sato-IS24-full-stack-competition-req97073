@@ -1,15 +1,17 @@
 import fs from 'fs'
 
-const PATH_DATA_PRODUCTS = 'src/data/products.json'
+// Define the path to the file which stores products data
+const pathToDataFile = 'src/data/products.json'
 
 const readProductsFile = () => {
-  const data = fs.readFileSync(PATH_DATA_PRODUCTS)
-  return JSON.parse(data)
+  const data = fs.readFileSync(pathToDataFile)
+  const products = JSON.parse(data) // parse the data as JSON
+  return products
 }
 
 const writeProductsFile = (products) => {
-  const json = JSON.stringify(products)
-  fs.writeFileSync(PATH_DATA_PRODUCTS, json)
+  const json = JSON.stringify(products) // convert the products to a JSON string
+  fs.writeFileSync(pathToDataFile, json)
 }
 
 export { readProductsFile, writeProductsFile }
